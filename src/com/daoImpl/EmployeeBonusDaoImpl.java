@@ -15,6 +15,7 @@ public class EmployeeBonusDaoImpl {
 	final static Logger logger=Logger.getLogger(EmployeeBonusDaoImpl.class);
 	
 	public void setBonus(EmployeeBonus bonus) throws SQLException{
+		logger.info("Setting the bonus to the Database");
 		
 		try (Connection con = ConnectionFactory.getConnection();
 				PreparedStatement stmt = con

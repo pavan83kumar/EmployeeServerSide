@@ -43,7 +43,8 @@ public class EmployeeDaoImpl {
 	}
 
 	public List<Employee> getEmployees(int deptNo, String type) throws SQLException {
-
+		
+		logger.info("Loading the employees based on the deptNo");
 		List<Employee> empList = new ArrayList<Employee>();
 
 		try (Connection con = ConnectionFactory.getConnection();

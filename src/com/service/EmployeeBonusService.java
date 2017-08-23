@@ -7,12 +7,16 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.apache.log4j.Logger;
+
 import com.daoImpl.EmployeeBonusDaoImpl;
 import com.entities.Bonus;
 import com.entities.Employee;
 import com.entities.EmployeeBonus;
 
 public class EmployeeBonusService {
+
+	final static Logger logger = Logger.getLogger(EmployeeBonusService.class);
 
 	BonusService bonusService = new BonusService();
 	EmployeeService empService = new EmployeeService();
@@ -68,6 +72,7 @@ public class EmployeeBonusService {
 	}
 
 	private void giveBonus(Employee e) throws SQLException {
+
 		int bonus = getEmployeeBonus(e.getSalary(), e.getSalGrade());
 		java.util.Date date = new java.util.Date();
 		long ms = date.getDate();

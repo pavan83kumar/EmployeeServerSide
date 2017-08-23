@@ -18,6 +18,8 @@ public class BonusDaoImpl {
 	final static Logger logger=Logger.getLogger(BonusDaoImpl.class);
 
 	public void loadBonus(List<Bonus> bonus) throws SQLException {
+		
+		logger.info("Entered the loadBonus Method in BonusDaoImpl");
 		// Loading Bonus data from file to database.
 		try (Connection con = ConnectionFactory.getConnection();
 				Statement s = con.createStatement();
