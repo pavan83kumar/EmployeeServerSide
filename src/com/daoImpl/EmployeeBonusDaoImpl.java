@@ -5,10 +5,14 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import org.apache.log4j.Logger;
+
 import com.connection.ConnectionFactory;
 import com.entities.EmployeeBonus;
 
 public class EmployeeBonusDaoImpl {
+	
+	final static Logger logger=Logger.getLogger(EmployeeBonusDaoImpl.class);
 	
 	public void setBonus(EmployeeBonus bonus) throws SQLException{
 		

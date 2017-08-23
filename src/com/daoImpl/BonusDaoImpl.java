@@ -8,10 +8,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.connection.ConnectionFactory;
 import com.entities.Bonus;
 
 public class BonusDaoImpl {
+	
+	final static Logger logger=Logger.getLogger(BonusDaoImpl.class);
 
 	public void loadBonus(List<Bonus> bonus) throws SQLException {
 		// Loading Bonus data from file to database.

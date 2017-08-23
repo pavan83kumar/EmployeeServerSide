@@ -9,12 +9,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.connection.ConnectionFactory;
 import com.entities.Employee;
 
 public class EmployeeDaoImpl {
+	
+	final static Logger logger=Logger.getLogger(EmployeeDaoImpl.class);
 
 	public void loadEmployee(List<Employee> employee) throws SQLException {
+		
+		
 
 		// Loading employee data from file to database.
 		try (Connection con = ConnectionFactory.getConnection(); Statement s = con.createStatement();
