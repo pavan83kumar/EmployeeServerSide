@@ -34,7 +34,7 @@ public final class ConnectionFactory {
 			e.printStackTrace();
 		}
 
-		String url = ("jdbc:mysql://localhost:3306/employeedb?useSSL=false");
+		String url = ("jdbc:mysql://localhost:3306/employeedb?useSSL=true");
 		String user = ("root");
 		String password =("password");
 

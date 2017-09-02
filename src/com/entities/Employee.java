@@ -23,6 +23,15 @@ public class Employee {
 		this.salary = salary;
 		this.salGrade = salGrade;
 	}
+	
+	public Employee(int deptNumber, Date doJ, Date doB, int salary, int salGrade) {
+		super();
+		this.deptNumber = deptNumber;
+		DoJ = doJ;
+		DoB = doB;
+		this.salary = salary;
+		this.salGrade = salGrade;
+	}
 
 	public int getNumber() {
 		return number;
